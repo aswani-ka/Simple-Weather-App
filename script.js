@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const descriptionDisplay = document.getElementById("description");
     const errorMessage = document.getElementById("error-message");
 
-    const API_KEY = "274edc29336effd0e67b841ec29f3362";
+    const API_KEY = "274edc29336effd0e67b841ec29f3362"; //environment variable
 
     getWeatherButton.addEventListener("click", async() => {
         const city = cityInput.value.trim();
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         temperatureDisplay.textContent = `Temperature: ${main.temp}`;
         descriptionDisplay.textContent = `Weather: ${weather[0].description}`;
 
+        //unlock the display
         weatherInfo.classList.remove("hidden");
         errorMessage.classList.add("hidden");
     }
