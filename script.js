@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const descriptionDisplay = document.getElementById("description");
     const errorMessage = document.getElementById("error-message");
 
-    const API_KEY = "274edc29336effd0e67b841ec29f3362"; //environment variable
+    const API_KEY = ""; //environment variable add your API KEY here
 
     getWeatherButton.addEventListener("click", async() => {
         const city = cityInput.value.trim();
