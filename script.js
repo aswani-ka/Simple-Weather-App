@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const weatherData = await fetchWeatherData(city);
             displayWeatherData(weatherData);
         } catch (error) {
-            // showError();
+            showError();
         }
     });
 
@@ -42,4 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         weatherInfo.classList.remove("hidden");
         errorMessage.classList.add("hidden");
     }
-})
+
+    function showError() {
+        weatherInfo.classList.add("hidden");
+        errorMessage.classList.remove("hidden");
+    }
+});
